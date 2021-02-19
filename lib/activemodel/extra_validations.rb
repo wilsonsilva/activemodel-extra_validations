@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require_relative "extra_validations/version"
+require_relative 'extra_validations/version'
 
 module Activemodel
   module ExtraValidations
