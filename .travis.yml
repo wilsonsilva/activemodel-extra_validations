@@ -1,6 +1,24 @@
 ---
 language: ruby
 cache: bundler
+
 rvm:
-  - 3.0.0
+  - 2.7
+  - 3.0
+  - jruby
+
 before_install: gem install bundler -v 2.2.3
+
+before_script:
+  - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+  - chmod +x ./cc-test-reporter
+  - ./cc-test-reporter before-build
+
+script:
+  - bundle exec bundle-audit
+  - bundle exec rspec
+  - bundle exec rubocop
+  - bundle exec rake yard:junk
+
+after_script:
+  - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
