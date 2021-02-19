@@ -1,10 +1,27 @@
-Style/StringLiterals:
-  Enabled: true
-  EnforcedStyle: double_quotes
+require: rubocop-rspec
 
-Style/StringLiteralsInInterpolation:
-  Enabled: true
-  EnforcedStyle: double_quotes
+AllCops:
+  DisplayCopNames: true
+  NewCops: enable
 
-Layout/LineLength:
+# ----------------------- Layout ----------------------
+
+Layout:
   Max: 120
+
+# ---------------------- Metrics ----------------------
+
+Metrics/BlockLength:
+  Exclude:
+    - '**/*_spec.rb'
+    - activemodel-extra_validations.gemspec
+
+# ----------------------- RSpec -----------------------
+
+RSpec/ExampleLength:
+  Enabled: false
+
+# ----------------------- Style -----------------------
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
