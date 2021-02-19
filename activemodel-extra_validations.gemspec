@@ -8,16 +8,16 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Wilson Silva"]
   spec.email         = ["me@wilsonsilva.net"]
 
-  spec.summary       = "TODO: Write a short summary, because RubyGems requires one."
-  spec.description   = "TODO: Write a longer description or delete this line."
-  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
+  spec.summary       = "Common validations for ActiveModel"
+  spec.description   = "Common validations for ActiveModel"
+  spec.homepage      = "https://github.com/wilsonsilva/activemodel-extra_validations"
   spec.license       = "MIT"
   spec.required_ruby_version = Gem::Requirement.new(">= 2.3.0")
 
   spec.metadata["allowed_push_host"] = "TODO: Set to 'http://mygemserver.com'"
 
   spec.metadata["homepage_uri"] = spec.homepage
-  spec.metadata["source_code_uri"] = "TODO: Put your gem's public repo URL here."
+  spec.metadata["source_code_uri"] = "https://github.com/wilsonsilva/activemodel-extra_validations"
   spec.metadata["changelog_uri"] = "https://github.com/wilsonsilva/activemodel-extra_validations/blob/master/CHANGELOG.md"
 
   # Specify which files should be added to the gem when it is released.
