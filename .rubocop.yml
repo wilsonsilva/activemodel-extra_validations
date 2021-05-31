@@ -10,6 +10,9 @@ AllCops:
 Layout:
   Max: 120
 
+Layout/FirstArrayElementIndentation:
+  Enabled: false
+
 # ---------------------- Metrics ----------------------
 
 Metrics/BlockLength:

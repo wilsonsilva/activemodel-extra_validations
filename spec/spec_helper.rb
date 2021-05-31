@@ -25,3 +25,17 @@ RSpec.configure do |config|
     c.syntax = :expect
   end
 end
+
+def build_model(&block)
+  Class.new do
+    include ActiveModel::Model
+    include ActiveModel::Validations
+    include ActiveModel::Attributes
+
+    def self.name
+      'SomeModel'
+    end
+
+    instance_eval(&block)
+  end
+end

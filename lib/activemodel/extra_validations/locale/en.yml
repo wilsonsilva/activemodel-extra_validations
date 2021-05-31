@@ -1,0 +1,9 @@
+---
+en:
+  activemodel: &activemodel
+    errors:
+      messages:
+        presence_of_at_least_one_of: "is missing. At least one of %{one_of} must be present"
+
+  activerecord:
+    <<: *activemodel

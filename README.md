@@ -7,9 +7,7 @@
 [![Security](https://hakiri.io/github/wilsonsilva/activemodel-extra_validations/master.svg)](https://hakiri.io/github/wilsonsilva/activemodel-extra_validations/master)
 [![Inline docs](http://inch-ci.org/github/wilsonsilva/activemodel-extra_validations.svg?branch=master)](http://inch-ci.org/github/wilsonsilva/activemodel-extra_validations)
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/activemodel/extra_validations`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+Common ActiveModel/ActiveRecord validations.
 
 ## Installation
 
@@ -29,7 +27,31 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+### presence_of_at_least_one_of
+
+Validates that at least one of the supplied attributes are given.
+
+```ruby
+require 'activemodel/extra_validations/presence_of_at_least_one_of'
+
+class BillingDetails
+  include ActiveModel::Model
+  include ActiveModel::Validations
+  include ActiveModel::Attributes
+
+  attribute :credit_card
+  attribute :debit_card
+
+  validate_presence_of_at_least_one_of :credit_card, :debit_card
+end
+
+billing_details = BillingDetails.new
+billing_details.valid?
+billing_details.errors.full_messages # => [
+#  'Debit card is missing. At least one of [:credit_card, :debit_card] must be present',
+#  'Credit card is missing. At least one of [:credit_card, :debit_card] must be present'
+# ]
+```
 
 ## Development
 

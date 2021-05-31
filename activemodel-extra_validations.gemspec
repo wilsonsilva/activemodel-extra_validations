@@ -4,7 +4,7 @@ require_relative 'lib/activemodel/extra_validations/version'
 
 Gem::Specification.new do |spec|
   spec.name        = 'activemodel-extra_validations'
-  spec.version     = Activemodel::ExtraValidations::VERSION
+  spec.version     = ActiveModel::ExtraValidations::VERSION
   spec.authors     = ['Wilson Silva']
   spec.email       = ['me@wilsonsilva.net']
 
@@ -28,6 +28,8 @@ Gem::Specification.new do |spec|
   spec.bindir        = 'exe'
   spec.executables   = spec.files.grep(%r{\Aexe/}) { |f| File.basename(f) }
   spec.require_paths = ['lib']
+
+  spec.add_dependency 'activemodel', '~> 6.1'
 
   spec.add_development_dependency 'bundler-audit', '~> 0.7'
   spec.add_development_dependency 'guard', '~> 2.16'
