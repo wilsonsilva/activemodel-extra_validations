@@ -1,5 +1,12 @@
 # Activemodel::ExtraValidations
 
+[![Gem Version](https://badge.fury.io/rb/activemodel-extra_validations.svg)](https://badge.fury.io/rb/activemodel-extra_validations)
+[![Build Status](https://travis-ci.org/wilsonsilva/activemodel-extra_validations.svg?branch=master)](https://travis-ci.org/wilsonsilva/activemodel-extra_validations)
+[![Maintainability](https://api.codeclimate.com/v1/badges/7afec90a09db3956b7dc/maintainability)](https://codeclimate.com/github/wilsonsilva/activemodel-extra_validations/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/7afec90a09db3956b7dc/test_coverage)](https://codeclimate.com/github/wilsonsilva/activemodel-extra_validations/test_coverage)
+[![Security](https://hakiri.io/github/wilsonsilva/activemodel-extra_validations/master.svg)](https://hakiri.io/github/wilsonsilva/activemodel-extra_validations/master)
+[![Inline docs](http://inch-ci.org/github/wilsonsilva/activemodel-extra_validations.svg?branch=master)](http://inch-ci.org/github/wilsonsilva/activemodel-extra_validations)
+
 Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/activemodel/extra_validations`. To experiment with that code, run `bin/console` for an interactive prompt.
 
 TODO: Delete this and the text above, and describe your gem
